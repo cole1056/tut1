@@ -17,7 +17,11 @@ public class Greeter {
   }
 
   public static void main(String[] args) {
-    String language = args[0];
+    if (args!=3) {
+		Systen.out.println("Incorrect number of arguments.");
+		exit(0);
+	}
+	String language = args[0];
     String country = args[1];
     String name = args[2];
     Greeter greeter = new Greeter(language, country, name);
